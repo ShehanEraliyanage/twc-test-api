@@ -6,6 +6,9 @@ import * as dotenv from "dotenv";
 
 //routes
 
+import userRouter from "./routes/user.js";
+import contactRoute from "./routes/contact.js";
+
 //contrains
 dotenv.config();
 const URL = process.env.MONGODB_URL;
@@ -26,5 +29,7 @@ connection.once("open", () => {
 });
 
 //Routes Use
+app.use("/users", userRouter);
+app.use("/contacts", contactRoute);
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
