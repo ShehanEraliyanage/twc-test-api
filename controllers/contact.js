@@ -21,7 +21,7 @@ export const addContact = async (req, res) => {
 };
 
 export const getAllContact = async (req, res) => {
-  const contacts = new contactModel.find({});
+  const contacts = await contactModel.find({});
   res.send(contacts);
 };
 

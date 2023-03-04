@@ -11,7 +11,7 @@ import {
 const router = express.Router();
 
 router.post("/new", addContact);
-router.get("/contacts", getAllContact);
+router.get("/all", getAllContact);
 router.post("/delete", deleteContact);
 router.post("/updateContact", updateContact);
 
