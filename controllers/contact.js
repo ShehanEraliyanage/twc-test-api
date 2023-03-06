@@ -32,9 +32,9 @@ export const deleteContact = async (req, res) => {
 
 export const updateContact = async (req, res) => {
   try {
-    const contact = await contactModel.findByIdAndUpdate(
+    const contact = await contactModel.findOneAndUpdate(
       {
-        _id: req.body.id,
+        _id: req.body._id,
       },
       {
         _id: req.body.id,
